@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/charles</property>
+        <property name="connection.username">charles</property>
+        <property name="connection.password">charles</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <mapping class="tsi.ensg.jee.hibernate.colloque.Participant.metier.Participant"/>
+        <mapping class="tsi.ensg.jee.hibernate.colloque.Evenement.metier.Evenement"/>
+    </session-factory>
+</hibernate-configuration>
