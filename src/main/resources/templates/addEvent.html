@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Event</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style/styles.css"></style>
+
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'" />
+
+<div class="login-box">
+    <h2>Ajouter un evenement</h2>
+    <form>
+        <div class="user-box">
+            <input type="integer" name="num_even" required="True">
+            <label>Numero de l'évenement</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="titre" required="True">
+            <label>Titre</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="theme" required="">
+            <label>Theme</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="start_date" required="">
+            <label>Date début</label>
+        </div>
+        <div class="user-box">
+            <input type="integer" name="duree" required="">
+            <label>Durée</label>
+        </div>
+        <div class="user-box">
+            <input type="integer" name="max_participants" required="">
+            <label>Maximum de participants</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="description" required="">
+            <label>Description</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="organisateur" required="">
+            <label>Organisateur</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="type" required="">
+            <label>Type</label>
+        </div>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </a>
+    </form>
+</div>
+
+</body>
+</html>
