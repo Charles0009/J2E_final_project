@@ -8,7 +8,7 @@ public class Application {
     public static void main(String[] args) {
 
 
-        Evenement eve1 = new Evenement(2, "even1", "theme1", "2022-01-30", 15, 10, "descri1", "orga1","type1");
+        Evenement eve1 = new Evenement(3, "even1", "theme1", "2022-01-30", 15, 10, "descri1", "orga1","type1");
         Evenement eve2 = new Evenement(2, "even2", "theme2", "2022-01-29", 16, 11, "descri2", "orga2","type2");
 
         EvenementService insert_test = new EvenementService();

@@ -5,33 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/J2E_final_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/J2E_final_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_21_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_5_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/session/Evenement/HibernateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/session/Participant/HibernateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addEvent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Evenement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Participant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/ServingWebContentApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/ServingWebContentApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +98,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../J2E_project-main/complete" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.25747126" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -140,7 +140,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Unnamed" />
+      <item itemvalue="Application.Application" />
       <item itemvalue="Application.web" />
     </list>
   </component>

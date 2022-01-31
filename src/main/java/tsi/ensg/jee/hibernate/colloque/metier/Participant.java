@@ -17,7 +17,7 @@ public class Participant {
     //@GenericGenerator(name="increment", strategy = "increment")
     @GeneratedValue(strategy = GenerationType.AUTO)
 
-    @Column(name = "id_parti")
+    //@Column(name = "id_parti")
 
 
     public long id_parti;
