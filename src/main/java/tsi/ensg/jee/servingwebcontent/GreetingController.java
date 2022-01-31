@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
+import tsi.ensg.jee.hibernate.colloque.metier.Participant;
 import tsi.ensg.jee.hibernate.colloque.services.EvenementService;
+import tsi.ensg.jee.hibernate.colloque.services.ParticipantService;
 
 @Controller
 public class GreetingController {
@@ -35,17 +37,8 @@ public class GreetingController {
 
     @PostMapping("/addEvenement")
     public String addEvenement(@Validated Evenement evenement, BindingResult result, Model model) {
-        int id  = evenement.getId();
-        String full = evenement.toString();
-        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(id);
-        System.out.println(full);
-
         EvenementService service = new EvenementService();
         service.insertEvenement(evenement);
-
-
-
         return"redirect:/eventAdded";
     }
 
@@ -55,28 +48,15 @@ public class GreetingController {
         return "eventAdded";
     }
 
+    @GetMapping("/addParticipant")
+    public String addParticipant() {
+        return "addParticipant";
+    }
 
-    //  @GetMapping("/addParticipant")
-    // public String greeting3(@RequestParam(name="name", required=false, defaultValue="Charles") String name, Model model) {
-    //    model.addAttribute("name", name);
-    //   return "addParticipant";
-    //}
-
-
-
-
-//    @GetMapping("/addParticipant")
-//    public String addParticipant(Model model) {
-//        model.addAttribute("participant", new Participant());
-//        //récupération avec Hibernate
-//        model.addAttribute("events", EvenementService.findAll());
-//        return "addParticipant";
-//    }
-
-//    @GetMapping("/greeting")
-//    public String greeting2(@RequestParam(name="name2", required=false, defaultValue="Charles") String name, Model model) {
-//        model.addAttribute("name2", name);
-//        return "greeting2";
-//    }
-
+    @PostMapping("/add1Parti")
+    public String add1Parti(@Validated Participant participant, BindingResult result, Model model) {
+        ParticipantService service_parti = new ParticipantService();
+        service_parti.insertParticipant(participant);
+        return"redirect:/eventAdded";
+    }
 }

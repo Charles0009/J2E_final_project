@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Add Participant</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,12 +6,9 @@
 
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
-
 <div class="login-box">
     <h2>Créer un participant</h2>
-<!--    th:action="@{\saveParticipant}" th:object="${participant}"-->
-    <form action="#"  method="post">
+    <form action="/add1Parti"  method="post">
         <div class="user-box">
             <input type="integer" name="num_pers" required="True">
             <label>Numero de la personne</label>
@@ -41,17 +37,16 @@
             <input type="text" name="observations" required="">
             <label>Observations</label>
         </div>
-        <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-                Submit
-
-
+        <a>
+            <input type='submit' id="event_sub" name="submit_event">
+            <!-- <span></span>
+             <span></span>
+             <span></span>
+             <span></span>
+             Submit--->
+            </input>
         </a>
     </form>
 </div>
-
 </body>
 </html>
