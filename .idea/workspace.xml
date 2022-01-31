@@ -5,13 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/session/Evenement/HibernateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/session/Participant/HibernateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/style/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/style/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/ServingWebContentApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/ServingWebContentApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +46,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -67,11 +97,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3_autres/SpringMvcHibernateFileUpload/src" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../J2E_project-main/complete" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -79,7 +110,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.web">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="tsi.ensg.jee.hibernate.colloque.Application" />

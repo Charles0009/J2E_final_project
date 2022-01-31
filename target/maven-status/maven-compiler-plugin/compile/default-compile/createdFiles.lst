@@ -1,0 +1,11 @@
+tsi/ensg/jee/hibernate/colloque/Participant/session/HibernateUtils.class
+tsi/ensg/jee/hibernate/colloque/Participant/metier/Participant.class
+tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantService.class
+tsi/ensg/jee/servingwebcontent/GreetingController.class
+tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementService.class
+tsi/ensg/jee/hibernate/colloque/Application.class
+tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.class
+tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.class
+tsi/ensg/jee/servingwebcontent/ServingWebContentApplication.class
+tsi/ensg/jee/hibernate/colloque/Evenement/metier/Evenement.class
+tsi/ensg/jee/hibernate/colloque/Evenement/session/HibernateUtils.class

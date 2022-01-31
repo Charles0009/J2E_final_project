@@ -4,12 +4,10 @@ package tsi.ensg.jee.hibernate.colloque.Evenement.services;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import tsi.ensg.jee.hibernate.colloque.Evenement.metier.Evenement;
-import tsi.ensg.jee.hibernate.colloque.Evenement.session.HibernateUtils;
-import tsi.ensg.jee.hibernate.colloque.Participant.metier.Participant;
+import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
+import tsi.ensg.jee.hibernate.colloque.session.Evenement.HibernateUtils;
 
 
 public class EvenementDAO {
