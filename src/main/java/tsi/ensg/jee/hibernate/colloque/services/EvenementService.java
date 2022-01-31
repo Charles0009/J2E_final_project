@@ -6,8 +6,10 @@ import org.hibernate.SessionFactory;
 
 
 import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
+import tsi.ensg.jee.hibernate.colloque.metier.Participant;
 import tsi.ensg.jee.hibernate.colloque.session.Evenement.HibernateUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EvenementService {
@@ -48,9 +50,9 @@ public class EvenementService {
         session.close();
         return result;
     }
-    public List<Evenement> getAll() {
+    public ArrayList<Evenement> getAll() {
         Session session = sessionFactory.openSession();
-        List<Evenement> result = session.createQuery("from Evenement").list();
+        ArrayList<Evenement> result = (ArrayList<Evenement>) session.createQuery("from Evenement").list();
         session.close();
         return result;
     }

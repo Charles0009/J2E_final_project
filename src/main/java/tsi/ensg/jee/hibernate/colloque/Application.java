@@ -5,6 +5,8 @@ import tsi.ensg.jee.hibernate.colloque.services.EvenementService;
 import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
 import tsi.ensg.jee.hibernate.colloque.services.ParticipantService;
 
+import java.util.List;
+
 public class Application {
 
     public static void main(String[] args) {
@@ -13,9 +15,16 @@ public class Application {
         Evenement eve1 = new Evenement(9, "even12", "theme1", "2022-01-30", 15, 10, "descri1", "orga1","type1");
         Evenement eve2 = new Evenement(2, "even2", "theme2", "2022-01-29", 16, 11, "descri2", "orga2","type2");
 
-        EvenementService insert_test = new EvenementService();
+        EvenementService service_ev = new EvenementService();
 
-        insert_test.insertEvenement(eve1);
+        List<Evenement> liste = service_ev.getAll();
+
+        System.out.println("/////////////////////////////////////////////////////////////////////////");
+        System.out.println(liste);
+        System.out.println(liste.toArray().length);
+
+
+        //insert_test.insertEvenement(eve1);
 
 
         Participant parti1 = new Participant(4,"Bob4", "Bobby", "bob@bob.fr", "1999-02-07", "Org1", "pas dobs");
@@ -24,7 +33,6 @@ public class Application {
 
         ParticipantService service = new ParticipantService();
 
-        service.insertParticipant(parti1);
 
 
         //eve1.addParticipant(parti1);

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Event mangement application</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style/styles.css"></style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Les evenements</h2>
+
+    <div th:each="evenement: ${evenement}" class="ligne" th:id="${evenement.id_ev}">
+        <div  class="container">
+            <div class="row-participant-text"><p th:text="${evenement.num_even}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.titre}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.theme}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.start_date}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.duree}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.max_participants}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.description}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.organisateur}"></p></div>
+            <div class="row-participant-text"><p th:text="${evenement.type}"></p></div>
+        </div>
+    </div>
+
+</div>
+
+<!---
+    <p>Get your greeting <a href="/greeting">here</a></p>
+    <p>Créer un evenement <a href="/addEvent">here</a></p>
+    <p>Créer un participant <a href="/addParticipant">here</a></p>
+    <p>Ajouter un participant à un évenement <a href="/ManageParticipants">here</a></p>
+    --->
+</body>
+</html>

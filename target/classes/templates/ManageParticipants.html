@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Participant Management</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style/styles.css"></style>
+
+</head>
+<body>
+<div class="login-box">
+    <h2>Gestion des participants</h2>
+
+    <div th:each="participant: ${participant}" class="ligne" th:id="${participant.id_parti}">
+        <div  class="container">
+            <div class="row-participant-text"><p th:text="${participant.num_pers}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.nom}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.prenom}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.email}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.date_naiss}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.organisation}"></p></div>
+            <div class="row-participant-text"><p th:text="${participant.observations}"></p></div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

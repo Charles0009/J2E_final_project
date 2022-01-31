@@ -14,6 +14,8 @@ import tsi.ensg.jee.hibernate.colloque.metier.Participant;
 import tsi.ensg.jee.hibernate.colloque.services.EvenementService;
 import tsi.ensg.jee.hibernate.colloque.services.ParticipantService;
 
+import java.util.List;
+
 @Controller
 public class GreetingController {
 
@@ -53,10 +55,32 @@ public class GreetingController {
         return "addParticipant";
     }
 
-    @PostMapping("/add1Parti")
-    public String add1Parti(@Validated Participant participant, BindingResult result, Model model) {
+    @PostMapping("/ParticipantAdding")
+    public String ParticipantAdding(@Validated Participant participant, BindingResult result, Model model) {
+          String list_of_inputs = participant.toString();
+        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(list_of_inputs);
+
         ParticipantService service_parti = new ParticipantService();
         service_parti.insertParticipant(participant);
         return"redirect:/eventAdded";
+    }
+
+    @GetMapping("/ManageParticipants")
+    public String getParticipant(Model model) {
+        ParticipantService service = new ParticipantService();
+        List<Participant> liste_participants = service.getAll();
+        model.addAttribute("participant", liste_participants);
+        return "ManageParticipants";
+    }
+
+    @GetMapping("/ManageEvenements")
+    public String getEvenement(Model model) {
+        EvenementService service_env = new EvenementService();
+        List<Evenement> liste_evenements = service_env.getAll();
+        System.out.println("/////////////////////////////////////////////////////////");
+        System.out.println(liste_evenements);
+        model.addAttribute("evenement", liste_evenements);
+        return "ManageEvenements";
     }
 }
