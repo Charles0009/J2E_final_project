@@ -10,7 +10,7 @@
 <div class="login-box">
     <h2>Créer un participant</h2>
     <form action="/participantEdit"  method="post">
-        <input type="number" name="id_parti" th:value="${participant.id_parti}">
+        <input type="number" name="id_parti" th:value="${participant.id_parti}"  style="visibility:hidden;">
         <div class="user-box">
             <input type="integer" name="num_pers" required="True" th:value="${participant.num_pers}" >
             <label>Numero de la personne</label>

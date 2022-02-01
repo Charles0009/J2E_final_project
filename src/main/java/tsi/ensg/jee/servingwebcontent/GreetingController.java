@@ -78,7 +78,7 @@ public class GreetingController {
     }
 
     @GetMapping("/editParticipant")
-    public String editParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "1") int id, Model model) {
+    public String editParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "0") int id, Model model) {
         ParticipantService service_edit = new ParticipantService();
         Participant participant = service_edit.get(id);
         model.addAttribute("participant", participant);
@@ -94,7 +94,7 @@ public class GreetingController {
     }
 
     @GetMapping("/editEvenement")
-    public String editEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "1") int id, Model model) {
+    public String editEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "0") int id, Model model) {
         EvenementService service_ev_edit = new EvenementService();
         Evenement evenement = service_ev_edit.get(id);
         model.addAttribute("evenement", evenement);
@@ -110,14 +110,14 @@ public class GreetingController {
     }
 
     @GetMapping("/deleteParticipant")
-    public String deleteParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "1") int id, Model model) {
+    public String deleteParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "0") int id, Model model) {
         ParticipantService service_delete_parti = new ParticipantService();
         service_delete_parti.deleteParticipant(id);
         return "redirect:/ManageParticipants";
     }
 
     @GetMapping("/deleteEvenement")
-    public String deleteEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "1") int id, Model model) {
+    public String deleteEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "0") int id, Model model) {
         EvenementService service_ev_delete = new EvenementService();
         service_ev_delete.deleteEvenement(id);
         return "redirect:/ManageEvenements";
