@@ -1,5 +1,7 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -49,9 +51,13 @@ public class Evenement {
        //     inverseJoinColumns = { @JoinColumn(name = "id_parti") })
 
     @ManyToMany
-    @JoinTable(name = "Participant_Evenement",
+    @JoinTable(name = "participant_evenement",
             joinColumns = { @JoinColumn(name = "id_ev") },
-            inverseJoinColumns = { @JoinColumn(name = "id_parti") })
+            inverseJoinColumns = { @JoinColumn(name = "id_parti")},
+            uniqueConstraints = @UniqueConstraint(columnNames = {
+            "id_ev", "id_parti" }))
+    @Cascade({CascadeType.MERGE, CascadeType.SAVE_UPDATE})
+
 
     private List<Participant> participants = new ArrayList<>();
 

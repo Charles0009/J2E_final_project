@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 
+import org.hibernate.query.Query;
 import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
 import tsi.ensg.jee.hibernate.colloque.metier.Participant;
 import tsi.ensg.jee.hibernate.colloque.session.Evenement.HibernateUtils;
@@ -27,15 +28,13 @@ public class EvenementService {
     public void insertEvenement(Evenement evenement) {
         Session session = this.sessionFactory.openSession();
         session.beginTransaction();
-        session.saveOrUpdate(evenement);
+        session.persist(evenement);
         session.getTransaction().commit();
         session.close();
     }
 
     public boolean deleteEvenement(int id) {
         Evenement evenementToDelete = this.get(id);
-        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(evenementToDelete.toString());
         Session session = this.sessionFactory.openSession();
         session.beginTransaction();
         session.delete(evenementToDelete);
@@ -58,4 +57,14 @@ public class EvenementService {
         session.close();
         return result;
     }
+
+    public void updateEvenement(Evenement evenement) {
+        Session session = this.sessionFactory.openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(evenement);
+        session.getTransaction().commit();
+        session.close();
+    }
+
+
 }

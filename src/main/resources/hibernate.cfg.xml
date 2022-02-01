@@ -13,5 +13,6 @@
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
         <mapping class="tsi.ensg.jee.hibernate.colloque.metier.Participant"/>
         <mapping class="tsi.ensg.jee.hibernate.colloque.metier.Evenement"/>
+
     </session-factory>
 </hibernate-configuration>

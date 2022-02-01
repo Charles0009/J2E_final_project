@@ -1,11 +1,13 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 
 //@Entity(name = "Participant")
@@ -38,16 +40,18 @@ public class Participant {
     @Column(nullable = false)
     private String observations;
 
-    //fetch = FetchType.EAGER
-    //@ManyToMany(cascade=CascadeType.ALL, mappedBy = "participants")
 
     @ManyToMany
-    @JoinTable(name = "Participant_Evenement",
+    @JoinTable(name = "participant_evenement",
             joinColumns = { @JoinColumn(name = "id_parti") },
-            inverseJoinColumns = { @JoinColumn(name = "id_ev") })
+            inverseJoinColumns = { @JoinColumn(name = "id_ev") },
+            uniqueConstraints = @UniqueConstraint(columnNames = {
+                    "id_ev", "id_parti" })
+    )
+    //@Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 
-  //  @ManyToMany(mappedBy = "participants")
     private List<Evenement> attending_events = new ArrayList<>();
+
 
     public Participant(){
 
@@ -98,7 +102,7 @@ public class Participant {
 
     public void addEvenement(Evenement evenement) {
         attending_events.add(evenement);
-        evenement.getParticipants().add( this );
+        evenement.getParticipants().add(this);
     }
 
     public void removeEvenement(Evenement evenement) {

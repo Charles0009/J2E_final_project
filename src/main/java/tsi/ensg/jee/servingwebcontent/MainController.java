@@ -92,12 +92,12 @@ public class MainController {
     @PostMapping("/participantEdit")
     public String participantEdit(@Validated Participant participant, BindingResult result, Model model) {
         ParticipantService service_parti = new ParticipantService();
-        service_parti.insertParticipant(participant);
+        service_parti.updateParticipant(participant);
         return"redirect:/ManageParticipants";
     }
 
     @GetMapping("/editEvenement")
-    public String editEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "0") int id, Model model) {
+    public String editEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "1") int id, Model model) {
         EvenementService service_ev_edit = new EvenementService();
         Evenement evenement = service_ev_edit.get(id);
         model.addAttribute("evenement", evenement);
@@ -108,7 +108,7 @@ public class MainController {
     @PostMapping("/evenementEdit")
     public String participantEdit(@Validated Evenement evenement, BindingResult result, Model model) {
         EvenementService service_ev = new EvenementService();
-        service_ev.insertEvenement(evenement);
+        service_ev.updateEvenement(evenement);
         return"redirect:/ManageEvenements";
     }
 

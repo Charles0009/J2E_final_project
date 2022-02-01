@@ -24,7 +24,7 @@ public class ParticipantService {
     public void insertParticipant(Participant participant) {
         Session session = this.sessionFactory.openSession();
         session.beginTransaction();
-        session.saveOrUpdate(participant);
+        session.persist(participant);
         session.getTransaction().commit();
         session.close();
     }
@@ -52,4 +52,12 @@ public class ParticipantService {
         session.close();
         return result;
     }
+    public void updateParticipant(Participant participant) {
+        Session session = this.sessionFactory.openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(participant);
+        session.getTransaction().commit();
+        session.close();
+    }
+
 }
