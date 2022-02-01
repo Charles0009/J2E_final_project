@@ -6,14 +6,14 @@ import org.hibernate.SessionFactory;
 
 
 import tsi.ensg.jee.hibernate.colloque.metier.Evenement;
+import tsi.ensg.jee.hibernate.colloque.metier.Participant;
 import tsi.ensg.jee.hibernate.colloque.session.Evenement.HibernateUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EvenementService {
 
-//
-//    private final SessionFactory sessionFactory;
     private final SessionFactory sessionFactory = HibernateUtils.createSessionFactory();
 
     public EvenementService(){
@@ -32,17 +32,19 @@ public class EvenementService {
         session.close();
     }
 
-    public boolean delete(Long id) {
+    public boolean deleteEvenement(int id) {
         Evenement evenementToDelete = this.get(id);
-        Session session = sessionFactory.openSession();
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(evenementToDelete.toString());
+        Session session = this.sessionFactory.openSession();
         session.beginTransaction();
         session.delete(evenementToDelete);
-        session.getTransaction();
+        session.getTransaction().commit();
         session.close();
         return true;
     }
 
-    public Evenement get(long id) {
+    public Evenement get(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Evenement result = session.get(Evenement.class, id);
@@ -50,12 +52,10 @@ public class EvenementService {
         session.close();
         return result;
     }
-    public List<Evenement> getAll() {
+    public ArrayList<Evenement> getAll() {
         Session session = sessionFactory.openSession();
-        List<Evenement> result = session.createQuery("from Evenement").list();
+        ArrayList<Evenement> result = (ArrayList<Evenement>) session.createQuery("from Evenement").list();
         session.close();
         return result;
     }
-
-
 }

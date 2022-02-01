@@ -1,5 +1,7 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,14 +15,14 @@ import java.util.Objects;
 //@Embeddable
 public class Participant {
     @Id
-    //@GeneratedValue(generator = "increment")
-    //@GenericGenerator(name="increment", strategy = "increment")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    //@GeneratedValue(strategy = GenerationType.AUTO)
 
-    @Column(name = "id_parti")
+    //@Column(name = "id_parti")
 
 
-    public long id_parti;
+    public int id_parti;
     @Column(nullable = false)
     private int num_pers;
     @Column(nullable = false)
@@ -112,7 +114,7 @@ public class Participant {
     public long getId() {
         return id_parti;
     }
-    public void setId(long id_parti){
+    public void setId(int id_parti){
         this.id_parti = id_parti;
     }
 

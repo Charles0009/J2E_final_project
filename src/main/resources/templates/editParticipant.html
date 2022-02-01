@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Add Participant</title>
+    <title>Manage corresponding participant</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style/styles.css"></style>
 
@@ -8,33 +9,34 @@
 <body>
 <div class="login-box">
     <h2>Créer un participant</h2>
-    <form action="/ParticipantAdding"  method="post">
+    <form action="/participantEdit"  method="post">
+        <input type="number" name="id_parti" th:value="${participant.id_parti}"  style="visibility:hidden;">
         <div class="user-box">
-            <input type="integer" name="num_pers" required="True">
+            <input type="integer" name="num_pers" required="True" th:value="${participant.num_pers}" >
             <label>Numero de la personne</label>
         </div>
         <div class="user-box">
-            <input type="text" name="nom" required="True">
+            <input type="text" name="nom" required="True" th:value="${participant.nom}">
             <label>Nom</label>
         </div>
         <div class="user-box">
-            <input type="text" name="prenom" required="">
+            <input type="text" name="prenom" required="True" th:value="${participant.prenom}">
             <label>Prénom</label>
         </div>
         <div class="user-box">
-            <input type="text" name="email" required="">
+            <input type="text" name="email" required="True" th:value="${participant.email}">
             <label>E-mail</label>
         </div>
         <div class="user-box">
-            <input type="text" name="date_naiss" required="">
+            <input type="text" name="date_naiss" required="True" th:value="${participant.date_naiss}">
             <label>Date de naissance</label>
         </div>
         <div class="user-box">
-            <input type="text" name="organisation" required="">
+            <input type="text" name="organisation" required="True" th:value="${participant.organisation}">
             <label>Organisation</label>
         </div>
         <div class="user-box">
-            <input type="text" name="observations" required="">
+            <input type="text" name="observations" required="True" th:value="${participant.observations}">
             <label>Observations</label>
         </div>
         <a>

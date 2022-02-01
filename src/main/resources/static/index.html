@@ -1,13 +1,20 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>Event mangement application</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style/styles.css"></style>
 </head>
 <body>
+
+
     <p>Get your greeting <a href="/greeting">here</a></p>
-    <p>Ajouter un evenement <a href="/addEvent">here</a></p>
+    <p>Créer un evenement <a href="/addEvent">here</a></p>
     <p>Créer un participant <a href="/addParticipant">here</a></p>
+    <p>Ajouter un participant à un évenement <a href="/ManageParticipants">here</a></p>
+    <p>Voir les évenement <a href="/ManageEvenements">here</a></p>
+    <p>Modifier un évenement <a href="/editEvenement">here</a></p>
+    <p>Modifier un participant<a href="/editParticipant">here</a></p>
 
 </body>
 </html>

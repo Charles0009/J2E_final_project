@@ -1,5 +1,7 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
@@ -13,15 +15,15 @@ public class Evenement {
 
 
     @Id
-    //@GeneratedValue(generator = "increment")
-    //@GenericGenerator(name="increment", strategy = "increment")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    //@GeneratedValue(strategy = GenerationType.AUTO)
 
     //@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "event_generator")
     //@SequenceGenerator(name="event_generator", sequenceName = "event_seq", allocationSize=50)
 
 
-    @Column(name="id_ev", updatable = false, nullable = false)
+    //@Column(name="id_ev", updatable = false, nullable = false)
     public int id_ev;
     @Column(name="num_even", nullable = false)
     public int num_even;
@@ -50,6 +52,7 @@ public class Evenement {
     @JoinTable(name = "Participant_Evenement",
             joinColumns = { @JoinColumn(name = "id_ev") },
             inverseJoinColumns = { @JoinColumn(name = "id_parti") })
+
     private List<Participant> participants = new ArrayList<>();
 
     //saveOrUpdate
