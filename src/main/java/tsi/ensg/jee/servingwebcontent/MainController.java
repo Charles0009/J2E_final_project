@@ -16,11 +16,14 @@ import tsi.ensg.jee.hibernate.colloque.services.ParticipantService;
 
 import java.util.List;
 
-@Controller
-public class GreetingController {
 
-      @GetMapping("/greeting")
-     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+
+@Controller
+public class MainController {
+
+
+    @GetMapping("/greeting")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
         return "greeting";
     }
@@ -50,7 +53,7 @@ public class GreetingController {
 
     @PostMapping("/ParticipantAdding")
     public String ParticipantAdding(@Validated Participant participant, BindingResult result, Model model) {
-          String list_of_inputs = participant.toString();
+        String list_of_inputs = participant.toString();
         System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println(list_of_inputs);
 

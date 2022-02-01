@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editParticipant.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editParticipant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editParticipant.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editParticipant.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Evenement/services/EvenementDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Participant/services/ParticipantDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
