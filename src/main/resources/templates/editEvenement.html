@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage corresponding participant</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style/styles.css"></style>
+</head>
+<body>
+<div class="login-box">
+            <h2>Modifier l'evenement</h2>
+<!--            <form action="/evenementEdit" method="post">-->
+                <form method="post">
+                <input type="number" name="id_ev" th:value="${evenement.id_ev}" style="visibility:hidden;">
+                <div class="user-box">
+                    <input type="number" name='num_even' required="True" th:value="${evenement.num_even}">
+                    <label>Numero de l'évenement</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='titre' required="True" th:value="${evenement.titre}">
+                    <label>Titre</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='theme' required="True" th:value="${evenement.theme}">
+                    <label>Theme</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='start_date' required="True" th:value="${evenement.start_date}">
+                    <label>Date début</label>
+                </div>
+                <div class="user-box">
+                    <input type="number" name='duree' required="True" th:value="${evenement.duree}">
+                    <label>Durée</label>
+                </div>
+                <div class="user-box">
+                    <input type="number" name='max_participants' required="True" th:value="${evenement.max_participants}">
+                    <label>Maximum de participants</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='description' required="True" th:value="${evenement.description}">
+                    <label>Description</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='organisateur' required="True" th:value="${evenement.organisateur}">
+                    <label>Organisateur</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name='type' required="True" th:value="${evenement.type}">
+                    <label>Type</label>
+                </div>
+<!--        <a>-->
+<!--             <span></span>-->
+<!--             <span></span>-->
+<!--             <span></span>-->
+<!--             <span></span>-->
+<!--            <button formaction="/deleteEvenement">Delete old event</button>-->
+<!--        </a>-->
+        <a>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button formaction="/evenementEdit">Change the event</button>
+        </a>
+    </form>
+</div>
+</body>
+</html>
+

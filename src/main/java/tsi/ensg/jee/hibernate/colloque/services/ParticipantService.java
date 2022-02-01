@@ -29,7 +29,7 @@ public class ParticipantService {
         session.close();
     }
 
-    public boolean deleteParticipant(long id) {
+    public boolean deleteParticipant(int id) {
         Participant participantToDelete = this.get(id);
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -38,7 +38,7 @@ public class ParticipantService {
         session.close();
         return true;
     }
-    public Participant get(long id) {
+    public Participant get(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Participant result = session.get(Participant.class, id);

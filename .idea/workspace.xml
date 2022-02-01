@@ -7,14 +7,16 @@
     <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addParticipant.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addParticipant.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addParticipant.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addParticipant.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Participant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/EvenementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/EvenementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
