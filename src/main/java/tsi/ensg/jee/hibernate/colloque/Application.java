@@ -19,15 +19,17 @@ public class Application {
 //        Participant parti2 = new Participant(2,"Bob2", "Bobby2", "bob2@bob.fr", "1999-02-08", "Org2", "pas dobs2");
 //        Participant parti3 = new Participant(3,"Bob3", "Bobby3", "bob3@bob.fr", "1999-02-09", "Org3", "pas dobs3");
 
-//        EvenementService service_ev = new EvenementService();
+        EvenementService service_ev = new EvenementService();
 //        ParticipantService service = new ParticipantService();
 //
-//        int num = 1;
+            int num = 5;
 //        int num1 = 2;
 //        Evenement evenement = service_ev.get(num);
 //        String full = evenement.toString();
 //        System.out.println("/////////////////////////////////////////////////////////////////////////");
 //        System.out.println(full);
+
+        service_ev.deleteEvenement(num);
 //
 //        Participant participant = service.get(num1);
 //        String full2 = participant.toString();

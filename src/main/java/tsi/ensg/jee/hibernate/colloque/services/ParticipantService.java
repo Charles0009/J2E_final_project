@@ -31,10 +31,10 @@ public class ParticipantService {
 
     public boolean deleteParticipant(int id) {
         Participant participantToDelete = this.get(id);
-        Session session = sessionFactory.openSession();
+        Session session = this.sessionFactory.openSession();
         session.beginTransaction();
         session.delete(participantToDelete);
-        session.getTransaction();
+        session.getTransaction().commit();
         session.close();
         return true;
     }

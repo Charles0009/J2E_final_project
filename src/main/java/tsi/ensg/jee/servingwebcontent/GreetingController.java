@@ -82,6 +82,7 @@ public class GreetingController {
         ParticipantService service_edit = new ParticipantService();
         Participant participant = service_edit.get(id);
         model.addAttribute("participant", participant);
+        service_edit.deleteParticipant(id);
         return "editParticipant";
     }
 
@@ -97,6 +98,7 @@ public class GreetingController {
         EvenementService service_ev_edit = new EvenementService();
         Evenement evenement = service_ev_edit.get(id);
         model.addAttribute("evenement", evenement);
+        service_ev_edit.deleteEvenement(id);
         return "editEvenement";
     }
 
@@ -115,9 +117,9 @@ public class GreetingController {
     }
 
     @GetMapping("/deleteEvenement")
-    public String deleteEvenement_for_update(@RequestParam(name="id_ev", required = true, defaultValue = "1") int id, Model model) {
+    public String deleteEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "1") int id, Model model) {
         EvenementService service_ev_delete = new EvenementService();
         service_ev_delete.deleteEvenement(id);
-        return "redirect:/editEvenement";
+        return "redirect:/ManageEvenements";
     }
 }
