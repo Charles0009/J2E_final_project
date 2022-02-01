@@ -120,4 +120,6 @@ public class GreetingController {
         service_ev_delete.deleteEvenement(id);
         return "redirect:/editEvenement";
     }
+
+    
 }
