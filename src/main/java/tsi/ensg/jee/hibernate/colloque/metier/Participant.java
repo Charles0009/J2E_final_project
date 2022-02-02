@@ -1,5 +1,8 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -22,7 +25,7 @@ public class Participant {
     //@Column(name = "id_parti")
 
 
-    public long id_parti;
+    public int id_parti;
     @Column(nullable = false)
     private int num_pers;
     @Column(nullable = false)
@@ -41,12 +44,14 @@ public class Participant {
     //fetch = FetchType.EAGER
     //@ManyToMany(cascade=CascadeType.ALL, mappedBy = "participants")
 
-    @ManyToMany
-    @JoinTable(name = "Participant_Evenement",
-            joinColumns = { @JoinColumn(name = "id_parti") },
-            inverseJoinColumns = { @JoinColumn(name = "id_ev") })
+    @ManyToMany(fetch=FetchType.EAGER,mappedBy = "participants")
+    //@JoinTable(name = "Participant_Evenement",
+    //        joinColumns = { @JoinColumn(name = "id_parti") },
+      //      inverseJoinColumns = { @JoinColumn(name = "id_ev") })
+    @Fetch(FetchMode.SUBSELECT)
+    @Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 
-  //  @ManyToMany(mappedBy = "participants")
+    //  @ManyToMany(mappedBy = "participants")
     private List<Evenement> attending_events = new ArrayList<>();
 
     public Participant(){
@@ -111,10 +116,10 @@ public class Participant {
     public int hashCode() {
         return Objects.hash( num_pers, nom, prenom,email,date_naiss,organisation,observations);}
 
-    public long getId() {
+    public int getId() {
         return id_parti;
     }
-    public void setId(long id_parti){
+    public void setId(int id_parti){
         this.id_parti = id_parti;
     }
 

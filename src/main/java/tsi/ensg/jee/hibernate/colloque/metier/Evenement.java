@@ -1,5 +1,9 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
+import org.hibernate.Criteria;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -48,11 +52,15 @@ public class Evenement {
     //        joinColumns = { @JoinColumn(name = "id_ev") },
        //     inverseJoinColumns = { @JoinColumn(name = "id_parti") })
 
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "Participant_Evenement",
             joinColumns = { @JoinColumn(name = "id_ev") },
-            inverseJoinColumns = { @JoinColumn(name = "id_parti") })
+            inverseJoinColumns = { @JoinColumn(name = "id_parti") }
+             )
+    //detachedCriteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
+    @Fetch(FetchMode.SUBSELECT)
 
+    @Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     private List<Participant> participants = new ArrayList<>();
 
     //saveOrUpdate

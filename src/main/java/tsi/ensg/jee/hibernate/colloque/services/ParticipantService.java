@@ -22,7 +22,7 @@ public class ParticipantService {
 //    }
 
     public void insertParticipant(Participant participant) {
-        Session session = this.sessionFactory.openSession();
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.saveOrUpdate(participant);
         session.getTransaction().commit();
@@ -51,5 +51,12 @@ public class ParticipantService {
         ArrayList<Participant> result = (ArrayList<Participant>) session.createQuery("from Participant").list();
         session.close();
         return result;
+    }
+    public void insertPersistParticipant(Participant participant) {
+        Session session = this.sessionFactory.openSession();
+        session.beginTransaction();
+        session.persist(participant);
+        session.getTransaction().commit();
+        session.close();
     }
 }

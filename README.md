@@ -1,59 +1,71 @@
 # J2E_final_project
 
+-------------------------------
+
+**0- Description**
+
+This application was coded as part of the final project for the JEE course of the TSI program at ENSG. It makes use of Java
+technologies such as **Spring**, **Hibernate**, **SpringMVC** and **SpringBoot**.
+
+This application is an event manager which allows an administrator to create, edit or delete evenements. It also allows the admin to add, edit or remove participants linked to the events.
+
+
+
+---------
 
 
 Please follow the following steps in order to install and launch our application on your computer.
 
-1 - INSTALLATION
+*********
+1 - **Import the file and install the necessary dependencies**
 
-First, you will have to clone the project from the github page associated with it. 
+First, you will have to clone the project from the github page associated with it.
 
-In a Linux terminal, please get the directions to the folder you want the application to be saved on and then run the following command line: 
+In a Linux terminal, please get the directions to the folder you want the application to be saved on and then run the following command line:
 
 ```bash
   git clone https://github.com/Charles0009/J2E_final_project.git
   ```
+The project runs on maven, so be sure to have maven installed on your computer, if not, here is a tutorial : https://maven.apache.org/users/index.html
 
-This project use maven as a tool build so you must have maven on your computer. If you don't have maven you can find here : https://maven.apache.org/users/index.html a tutorial
-for download and get started with maven.
+The project uses a database as well. The setup of the database is described below. Here, we recommend you to install PotgreSQL by following this tutorial :  https://www.postgresql.org/download/
 
-For the database, we use PostgreSQL. We suppose that you already have PostgreSQL but if it is not the case you can download PostgreSQL here : https://www.postgresql.org/download/.
-Once downloaded you can follow the official getting started tutorial if you are not familiar with PostgreSQL. (https://www.postgresqltutorial.com/postgresql-getting-started/)
+We advise you to use PgAdmin to visualize the database. To install it, follow this link : https://www.pgadmin.org/download/. On this project, we used version 4.5.
 
-2 - DATABASE CONFIGURATION
+Finally, we advise you to install the IDE IntelliJ as this program was developed under it and the tutorial will follow the functionalities offered by this IDE. Here is a link to install it : https://www.jetbrains.com/idea/download/. Choose the Community edition.
 
-In this part we suppose you have PostgreSQL on your computer and that you know how to create a database and parametrize the user and password for the created database. You now
-have the choice for your database. You can do option A and follow our instructions (recommended if you are a beginner with PostgreSQL) or option B and create the way you want
-your database (not recommded if you begin with PostgreSQL).
+Note : if you are more experienced with another IDE, our program is also compatible but the ways to run it on other IDEs than IntelliJ will not be showed in this tutorial.
 
-A - Follow our instructions
-(When words are between '' you just have to write what's inside the quotes)
+----------------------
+**2 - Get your database ready**
 
-First step : create a user named 'test'
-Second step : create a database 'test' owned by the user 'test'
-Third step : create a password 'test' for your database
+At this point, you should have PostgreSQL installed and an app (PgAdmin) to visualize the database.
 
-B - Create the way you want
+To setup your database, follow these steps :
 
-Here we suppose you created the database the way you wanted and now you have a database with a name and a user with a name and a password. You will now have to change
-things in files before launching the application. Download the project by doing :
-  ```bash
-  git clone https://github.com/Antoine-overflow/J2E_project.git
-  ```
-Then, open the project with your favourite IDE and open the file hibernate.cfg.xml in the complete/src/main/resources folder. You can now modifiy and adapt lines 6,7 and 8 of   the file for making the connection between your created database and our application.
+1) create a user with the name you want, for simplicity in this tutorial, we create the user 'test'
+2) create a database with the name you want, for simplicity in this tutorial, we create the database 'test'
+3) create a password you want for accessing your database, for simplicity in this tutorial, we create the password 'test'
 
-3 - LAUNCH
+When the database is created you can open an IDE (for this tutorial, we use IntelliJ) and check the file hibernate.cfg.xml in the directory src/main/java/resources.
+You will have to check the lines 7 to 9 to make sure that the parameters match the one you parametrized your database with.
 
-Open your terminal and enter the following code :
-```bash
-git clone https://github.com/Antoine-overflow/J2E_project.git
-cd J2E_project/complete
-./mvnw spring-boot:run
-```
+----------
+**3 - Launch the application**
+In your IntelliJ IDE, on the top right, a web configuration should be displyed, if so, just hit the run button after building the project.
 
-If you already cloned the repository by doing option B in the 2nd part just open a terminal in the J2E_project/complete folder and enter the following line :
-```bash
-./mvnw spring-boot:run
-```
+If the configuration is not present, add a new one by following those steps :
 
-Open your favourite web browser and paste in the link area "localhost/8080". You are now running our application ! Enjoy :) 
+1) Click "Edit configurations...", a new window should pop up.
+2) On the top left, click the + button.
+3) Choose the "Application" configuration.
+4) Then choose the name of your configuration.
+5) Choose the Java v11 or 13 JDK.
+6) Put the path to the file ServingWebContentApplication.java as the main.
+7) Hit apply and then ok.
+
+Once you've hit the run button, go to your usual web explorer and enter the url "localhost:8080" in the research bar.
+The app should launch normally, if not don't hesitate to contact us on Github!
+
+**Enjoy**
+
