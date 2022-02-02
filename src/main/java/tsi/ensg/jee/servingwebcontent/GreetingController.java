@@ -193,16 +193,23 @@ public class GreetingController {
 
     @PostMapping("/evenementEdit/{id}")
     public String participantEdit(@PathVariable int id, @Validated Evenement evenement, BindingResult result, Model model) {
-        System.out.println("idddddddddddddddddddddd");
-        System.out.println(id);
 
         EvenementService service_ev = new EvenementService();
-//        service_ev.deleteEvenement(id);
+        Evenement old_event = service_ev.get(id);
+
+        List<Participant> liste_parti = old_event.getParticipants();
+
         evenement.setId(id);
+         for (int i = 0; i < liste_parti.size(); i++) {
+
+            Participant p = liste_parti.get(i);
+            Participant new_part = new Participant(p.getNum_pers(),p.getNom(),p.getPrenom(),p.getEmail(),p.getDate_naiss(),p.getOrganisation(),p.getObservations());
+            evenement.addParticipant(new_part);
+
+        }
+
         service_ev.insertEvenement(evenement);
         return"redirect:/ManageEvenements";
     }
-
-
 
 }
