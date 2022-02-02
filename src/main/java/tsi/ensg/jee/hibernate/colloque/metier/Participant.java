@@ -1,6 +1,7 @@
 package tsi.ensg.jee.hibernate.colloque.metier;
 
 import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -41,16 +42,20 @@ public class Participant {
     private String observations;
 
 
+
+
     @ManyToMany
     @JoinTable(name = "participant_evenement",
             joinColumns = { @JoinColumn(name = "id_parti") },
             inverseJoinColumns = { @JoinColumn(name = "id_ev") },
             uniqueConstraints = @UniqueConstraint(columnNames = {
-                    "id_ev", "id_parti" })
-    )
-    //@Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
+                                "id_ev", "id_parti" })
 
-    private List<Evenement> attending_events = new ArrayList<>();
+    )
+    //@Cascade({CascadeType.MERGE, CascadeType.SAVE_UPDATE})
+
+
+    private List<Evenement> attending_events = new ArrayList<Evenement>();
 
 
     public Participant(){

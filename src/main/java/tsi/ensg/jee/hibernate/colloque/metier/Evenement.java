@@ -50,16 +50,19 @@ public class Evenement {
     //        joinColumns = { @JoinColumn(name = "id_ev") },
        //     inverseJoinColumns = { @JoinColumn(name = "id_parti") })
 
+
+
     @ManyToMany
     @JoinTable(name = "participant_evenement",
             joinColumns = { @JoinColumn(name = "id_ev") },
             inverseJoinColumns = { @JoinColumn(name = "id_parti")},
             uniqueConstraints = @UniqueConstraint(columnNames = {
-            "id_ev", "id_parti" }))
+                  "id_ev", "id_parti" }))
+
     @Cascade({CascadeType.MERGE, CascadeType.SAVE_UPDATE})
 
 
-    private List<Participant> participants = new ArrayList<>();
+    private List<Participant> participants = new ArrayList<Participant>();
 
     //saveOrUpdate
 
@@ -168,6 +171,6 @@ public class Evenement {
     public void setType(String type){this.type = type;}
 
     public List<Participant> getParticipants(){return participants;}
-    public void setParticipants(ArrayList<Participant> participants){this.participants = participants;}
+    public void setParticipants(List<Participant> participants){this.participants = participants;}
 
 }
