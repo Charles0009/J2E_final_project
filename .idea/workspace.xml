@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="" />
+    <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editEvenement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editEvenement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editEvenement.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editEvenement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Evenement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/metier/Evenement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/EvenementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/EvenementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tsi/ensg/jee/servingwebcontent/GreetingController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +87,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3_autres/src" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.25747126" />

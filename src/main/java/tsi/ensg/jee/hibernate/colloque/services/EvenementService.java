@@ -53,4 +53,11 @@ public class EvenementService {
         session.close();
         return result;
     }
+    public void insertPersistEvenement(Evenement evenement) {
+        Session session = this.sessionFactory.openSession();
+        session.beginTransaction();
+        session.persist(evenement);
+        session.getTransaction().commit();
+        session.close();
+    }
 }

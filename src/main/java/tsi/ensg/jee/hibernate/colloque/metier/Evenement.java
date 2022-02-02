@@ -131,7 +131,7 @@ public class Evenement {
         return id_ev;
     }
     public void setId(int id){
-        this.id_ev = id_ev;
+        this.id_ev = id;
     }
 
     public int getNum_even(){return num_even;}
