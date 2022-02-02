@@ -1,5 +1,6 @@
 package tsi.ensg.jee.hibernate.colloque.services;
 
+import jdk.jfr.Category;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -30,10 +31,17 @@ public class ParticipantService {
     }
 
     public boolean deleteParticipant(int id) {
+
         Participant participantToDelete = this.get(id);
-        Session session = this.sessionFactory.openSession();
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(participantToDelete.toString());
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
-        session.delete(participantToDelete);
+        Object persistentInstance = session.load(Participant.class, id);
+        if (persistentInstance != null) {
+            session.delete(persistentInstance);
+        }
+        //session.delete(participantToDelete);
         session.getTransaction().commit();
         session.close();
         return true;

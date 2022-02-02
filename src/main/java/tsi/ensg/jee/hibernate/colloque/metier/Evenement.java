@@ -47,29 +47,23 @@ public class Evenement {
     public String organisateur;
     @Column(name="type", nullable = false)
     public String type;
-   // @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-   // @JoinTable(name = "Participant_Evenement",
-    //        joinColumns = { @JoinColumn(name = "id_ev") },
-       //     inverseJoinColumns = { @JoinColumn(name = "id_parti") })
 
     @ManyToMany(fetch=FetchType.EAGER)
     @JoinTable(name = "Participant_Evenement",
             joinColumns = { @JoinColumn(name = "id_ev") },
-            inverseJoinColumns = { @JoinColumn(name = "id_parti") }
+            inverseJoinColumns = { @JoinColumn(name = "id_parti")}
+
              )
-    //detachedCriteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY)
     @Fetch(FetchMode.SUBSELECT)
 
     @Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     private List<Participant> participants = new ArrayList<>();
 
-    //saveOrUpdate
 
     public Evenement(){
 
     }
 
-    //, ArrayList<Participant> participants
 
     public Evenement(int num_even, String titre, String theme, String start_date, int duree, int max_participants, String description, String organisateur, String type){
 
@@ -82,7 +76,6 @@ public class Evenement {
         this.description = description;
         this.organisateur = organisateur;
         this.type = type;
-        //this.participants = participants;
 
 
     }

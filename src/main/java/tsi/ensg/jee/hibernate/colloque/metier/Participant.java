@@ -41,17 +41,12 @@ public class Participant {
     @Column(nullable = false)
     private String observations;
 
-    //fetch = FetchType.EAGER
-    //@ManyToMany(cascade=CascadeType.ALL, mappedBy = "participants")
 
     @ManyToMany(fetch=FetchType.EAGER,mappedBy = "participants")
-    //@JoinTable(name = "Participant_Evenement",
-    //        joinColumns = { @JoinColumn(name = "id_parti") },
-      //      inverseJoinColumns = { @JoinColumn(name = "id_ev") })
+
     @Fetch(FetchMode.SUBSELECT)
     @Cascade({org.hibernate.annotations.CascadeType.MERGE, org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 
-    //  @ManyToMany(mappedBy = "participants")
     private List<Evenement> attending_events = new ArrayList<>();
 
     public Participant(){
@@ -67,7 +62,6 @@ public class Participant {
         this.date_naiss = date_naiss;
         this.organisation = organisation;
         this.observations = observations;
-       // this.attending_events = attending_events;
 
     }
 
@@ -82,7 +76,6 @@ public class Participant {
                 ", date_naiss='" + date_naiss + '\'' +
                 ", organisation='" + organisation + '\'' +
                 ", observations='" + observations +'\'' +
-                //", attending_events='" + attending_events +'\'' +
                 '}';
     }
 

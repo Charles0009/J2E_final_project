@@ -26,12 +26,6 @@ public class GreetingController {
         return "greeting";
     }
 
-    // @GetMapping("/addEvent")
-    //  public String greeting2(@RequestParam(name="name", required=false, defaultValue="Charles") String name, Model model) {
-    //    model.addAttribute("name", name);
-    //     return "addEvent";
-    //}
-
 
     @GetMapping("/addEvent")
     public String addEvent() {
@@ -59,12 +53,7 @@ public class GreetingController {
         return "addParticipant";
     }
 
-//    @GetMapping("/Participant/Add/{id}")
-//    public String ParticipantAdding(@PathVariable int id){
-//        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////////");
-//        System.out.println(id);
-//        return "redirect:/addParticipant.html";
-//    }
+
 
     @PostMapping("/Participant/Add/{id}")
     public String ParticipantAdding(@Validated Participant p,@PathVariable int id, BindingResult result, Model model) {
@@ -73,15 +62,7 @@ public class GreetingController {
 
         ParticipantService service = new ParticipantService();
 
-
-        //String list_of_inputs = participant.toString();
-        //int num_pers,String nom,String prenom,String email, String date_naiss, String organisation, String observations
         Participant new_part = new Participant(p.getNum_pers(),p.getNom(),p.getPrenom(),p.getEmail(),p.getDate_naiss(),p.getOrganisation(),p.getObservations());
-        //System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-        //System.out.println(list_of_inputs);
-
-       //ParticipantService service_parti = new ParticipantService();
-        //service.insertParticipant(new_part);
 
         EvenementService service_ev = new EvenementService();
         Evenement eve1 = service_ev.get(id);
@@ -108,8 +89,6 @@ public class GreetingController {
     public String getEvenement(Model model) {
         EvenementService service_env = new EvenementService();
         List<Evenement> liste_evenements = service_env.getAll();
-       // System.out.println("/////////////////////////////////////////////////////////");
-        //System.out.println(liste_evenements);
         model.addAttribute("evenement", liste_evenements);
         return "ManageEvenements";
     }
@@ -118,67 +97,22 @@ public class GreetingController {
     public String deleteEvent(@PathVariable int id){
         EvenementService service = new EvenementService();
         service.deleteEvenement(id);
-        //evenementService.delete(id);
         return "redirect:/ManageEvenements";
     }
 
+
+
     @GetMapping("voir/Participant/{id}")
     public String participant(@PathVariable int id) {
-        System.out.println(id);
         EvenementService service = new EvenementService();
         Evenement evenement = service.get(id);
-        System.out.println(evenement);
         return "redirect:/ManageParticipants/{id}";
     }
-
-/*
-    @GetMapping("modify/Event/{id}")
-    public String editEvenement(@PathVariable int id,Model model) {
-        System.out.println("idddddddddddddddddddddd");
-        System.out.println(id);
-        //       EvenementService service_ev_edit = new EvenementService();
-        //     Evenement evenement = service_ev_edit.get(id);
-        //   model.addAttribute("evenement", evenement);
-        // service_ev_edit.deleteEvenement(id);
-        String ids=String.valueOf(id);
-        System.out.println("went here");
-        return "redirect:/editEvenement/"+ids;
-    }
-
-    @GetMapping("/editEvenement/{id}")
-
-    public String getEv(@RequestParam(name="id_ev", required = true, defaultValue = "9") int id, Model model) {
-        System.out.println("went here 2");
-
-        EvenementService service_env = new EvenementService();
-        Evenement evenement = service_env.get(id);
-        model.addAttribute("evenement", evenement);
-        return "editEvenement";
-    }
-
-
-    @PostMapping("/evenementEdit/{id}")
-    public String participantEdit(@PathVariable int id, @Validated Evenement evenement,BindingResult result, Model model) {
-        System.out.println("went here 2");
-        evenement.setId(id);
-        System.out.println("went here3");
-        EvenementService service_ev = new EvenementService();
-        service_ev.insertEvenement(evenement);
-        return"redirect:/ManageEvenements";
-    }
- */
 
 
     @GetMapping("modify/Event/{id}")
     public String editEvenement1(@PathVariable int id,Model model) {
-
-        System.out.println(id);
-        //       EvenementService service_ev_edit = new EvenementService();
-        //     Evenement evenement = service_ev_edit.get(id);
-        //   model.addAttribute("evenement", evenement);
-        // service_ev_edit.deleteEvenement(id);
         String ids=String.valueOf(id);
-        System.out.println("went here");
         return "redirect:/editEvenement/"+ids;
     }
 
@@ -196,9 +130,7 @@ public class GreetingController {
 
         EvenementService service_ev = new EvenementService();
         Evenement old_event = service_ev.get(id);
-
         List<Participant> liste_parti = old_event.getParticipants();
-
         evenement.setId(id);
          for (int i = 0; i < liste_parti.size(); i++) {
 
@@ -212,4 +144,21 @@ public class GreetingController {
         return"redirect:/ManageEvenements";
     }
 
+
+ //   @PostMapping("delete/Participant/{id}")
+ //   public String deleteParti(@PathVariable int id){
+ //       ParticipantService service = new ParticipantService();
+ //       Participant participant = service.get(id);
+ //       List<Evenement> liste_evenement = participant.getAttending_events();
+ //       Evenement evenement = liste_evenement.get(0);
+ //       participant.removeEvenement(evenement);
+ //       service.insertParticipant(participant);
+ //       service.deleteParticipant(participant.getId());
+ //        String ids=String.valueOf(id);
+  //      return "redirect:/ManageParticipants/"+ids;
+    //}
+
+
 }
+
+

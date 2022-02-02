@@ -29,8 +29,7 @@ public class EvenementService {
 
     public boolean deleteEvenement(int id) {
         Evenement evenementToDelete = this.get(id);
-        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(evenementToDelete.toString());
+
         Session session = this.sessionFactory.openSession();
         session.beginTransaction();
         session.delete(evenementToDelete);
