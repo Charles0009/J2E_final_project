@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-<div class="login-box">
+<div >
     <h1>Gestion des participants</h1>
 
     <a href="/addParticipant">
@@ -40,9 +40,6 @@
                 <th>Observations</th>
                 <th>Organisation</th>
 
-
-
-
             </tr>
             </thead>
             <tbody>
@@ -56,16 +53,16 @@
                 <td th:text="${participant.observations}" />
                 <td th:text="${participant.organisation}" />
                 <td>
-                    <form action="#" th:action="@{'/delete/Event/{id}' (id=${participant.getId()})}" method="POST">
+                    <form action="#" th:action="@{'/delete/Participant/{id}' (id=${participant.getId()})}" method="POST">
                         <button> Supprimer </button>
                     </form>
                 </td>
                 <td>
-                    <form action="#" th:action="@{'/modify/Event/{id}' (id=${participant.getId()})}" method="GET">
+                    <form action="#" th:action="@{'/modify/Participant/{id}' (id=${participant.getId()})}" method="GET">
                         <button> Modifier </button>
                     </form>
                 </td>
-                
+
             </tr>
             </tbody>
         </table>

@@ -67,10 +67,24 @@ public class GreetingController {
         return"redirect:/eventAdded";
     }
 
-    @GetMapping("/ManageParticipants")
-    public String getParticipant(Model model) {
+    @GetMapping("/ManageParticipants/{id}")
+    public String getParticipant(@PathVariable int id,Model model) {
+
         ParticipantService service = new ParticipantService();
-        List<Participant> liste_participants = service.getAll();
+//        List<Participant> liste_participants = service.getAll();
+        EvenementService service_ev = new EvenementService();
+        Evenement eve1 = service_ev.get(id);
+        List<Participant> liste_participants =  eve1.getParticipants();
+        System.out.println("size : ");
+        System.out.println(liste_participants.size());
+
+//        for (int i = 0; i < liste_participants.size(); i++)
+//        {
+//            System.out.println(i);
+//            Participant participant = participants.get(i);
+//            liste_participants.add(participant);
+//
+//        }
         model.addAttribute("participant", liste_participants);
         return "ManageParticipants";
     }
@@ -95,8 +109,10 @@ public class GreetingController {
     @GetMapping("voir/Participant/{id}")
     public String participant(@PathVariable int id) {
         System.out.println(id);
-        //evenementService.delete(id);
-        return "redirect:/ManageParticipants";
+        EvenementService service = new EvenementService();
+        Evenement evenement = service.get(id);
+        System.out.println(evenement);
+        return "redirect:/ManageParticipants/{id}";
     }
 
 

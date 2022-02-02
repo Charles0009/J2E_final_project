@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a51c30b7-6147-411d-888b-14c670f9243e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/EvenementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/services/ParticipantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/hibernate/colloque/metier/Evenement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tsi/ensg/jee/servingwebcontent/GreetingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ManageEvenements.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ManageEvenements.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/ManageParticipants.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/ManageParticipants.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

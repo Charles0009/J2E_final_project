@@ -12,7 +12,7 @@ public class Application {
     public static void main(String[] args) {
 
 
-        Evenement eve1 = new Evenement(9, "even12", "theme1", "2022-01-30", 15, 10, "descri1", "orga1","type1");
+        //Evenement eve1 = new Evenement(9, "even12", "theme1", "2022-01-30", 15, 10, "descri1", "orga1","type1");
         Evenement eve2 = new Evenement(2, "even2", "theme2", "2022-01-29", 16, 11, "descri2", "orga2","type2");
 
         EvenementService service_ev = new EvenementService();
@@ -33,6 +33,19 @@ public class Application {
 
         ParticipantService service = new ParticipantService();
 
+        Evenement eve1 = service_ev.get(1);
+        //         Participant parti1 = service.get(1);
+        //       Participant parti2 = service.get(2);
+        //     Participant parti3 = service.get(3);
+
+        List<Participant> participants =  eve1.getParticipants();
+        System.out.println("/////////////////////////////////////////////////////////////////////////");
+
+        for (int i = 0; i < participants.size(); i++)
+        {
+            Participant participant = participants.get(i);
+            System.out.println(participant);
+        }
 
 
         //eve1.addParticipant(parti1);
