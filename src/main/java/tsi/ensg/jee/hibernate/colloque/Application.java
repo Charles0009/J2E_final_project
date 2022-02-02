@@ -33,20 +33,20 @@ public class Application {
 
           Evenement eve1 = service_ev.get(1);
 
-//        List<Participant> participants =  eve1.getParticipants();
-//        System.out.println("/////////////////////////////////////////////////////////////////////////");
-//
-//        for (int i = 0; i < participants.size(); i++)
-//        {
-//            Participant participant = participants.get(i);
-//            System.out.println(participant);
-//        }
+        List<Participant> participants =  eve1.getParticipants();
+        System.out.println("/////////////////////////////////////////////////////////////////////////");
 
-        eve1.addParticipant(parti1);
-        eve1.addParticipant(parti2);
-        eve1.addParticipant(parti3);
+        for (int i = 0; i < participants.size(); i++)
+        {
+            Participant participant = participants.get(i);
+            System.out.println(participant);
+        }
 
-       service_ev.updateEvenement(eve1);
+ //       eve1.addParticipant(parti1);
+  //      eve1.addParticipant(parti2);
+  //      eve1.addParticipant(parti3);
+
+ //      service_ev.updateEvenement(eve1);
 
 //        List<Participant> liste = service_ev.getParticipants(eve1);
 //        System.out.println("/////////////////////////////////////////////////////////////////////////");
