@@ -42,7 +42,8 @@ public class GreetingController {
     public String addEvenement(@Validated Evenement evenement, BindingResult result, Model model) {
         EvenementService service = new EvenementService();
         service.insertEvenement(evenement);
-        return"redirect:/ManageEvenements";
+        return"redirect:/ManageEvenements" +
+                "";
     }
 
     @GetMapping("/eventAdded")
