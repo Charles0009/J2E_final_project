@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -83,4 +84,21 @@ public class GreetingController {
         model.addAttribute("evenement", liste_evenements);
         return "ManageEvenements";
     }
+
+    @PostMapping("delete/Event/{id}")
+    public String deleteEvent(@PathVariable int id){
+        System.out.println(id);
+        //evenementService.delete(id);
+        return "redirect:/ManageEvenements";
+    }
+
+    @GetMapping("voir/Participant/{id}")
+    public String participant(@PathVariable int id) {
+        System.out.println(id);
+        //evenementService.delete(id);
+        return "redirect:/ManageParticipants";
+    }
+
+
+
 }

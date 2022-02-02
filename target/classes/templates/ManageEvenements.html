@@ -1,36 +1,86 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Event mangement application</title>
+    <title>Event management application</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style/styles.css"></style>
+
+    <style>
+      table {
+        background-color: #d9d9d9;
+      }
+      th {
+        border: 2px solid #095484;
+      }
+      td {
+        border: 10px groove #1c87c9;
+      }
+      #add{
+        height:50px;
+        width:100px;
+      }
+    </style>
+
 </head>
 <body>
 
-<div class="login-box">
-    <h2>Les evenements</h2>
+<h1> Manage Evenements : </h1>
 
-    <div th:each="evenement: ${evenement}" class="ligne" th:id="${evenement.id_ev}">
-        <div  class="container">
-            <div class="row-participant-text"><p th:text="${evenement.num_even}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.titre}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.theme}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.start_date}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.duree}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.max_participants}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.description}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.organisateur}"></p></div>
-            <div class="row-participant-text"><p th:text="${evenement.type}"></p></div>
-        </div>
-    </div>
 
-</div>
+<a href="/addEvent">
+    <button class="button" id="add" type="submit" name="add" >Add evenement</button>
+</a>
 
-<!---
-    <p>Get your greeting <a href="/greeting">here</a></p>
-    <p>Créer un evenement <a href="/addEvent">here</a></p>
-    <p>Créer un participant <a href="/addParticipant">here</a></p>
-    <p>Ajouter un participant à un évenement <a href="/ManageParticipants">here</a></p>
-    --->
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Titre</th>
+        <th>Theme</th>
+        <th>Description</th>
+        <th>Date de début</th>
+        <th>Durée</th>
+        <th>Nombre de participants max</th>
+        <th>Organisateur</th>
+        <th>Type</th>
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="evenement : ${evenement}">
+        <td th:text="${evenement.id}" />
+        <td th:text="${evenement.titre}" />
+        <td th:text="${evenement.theme}" />
+        <td th:text="${evenement.description}" />
+        <td th:text="${evenement.start_date}" />
+        <td th:text="${evenement.duree}" />
+        <td th:text="${evenement.max_participants}" />
+        <td th:text="${evenement.organisateur}" />
+        <td th:text="${evenement.type}" />
+
+
+        <td>
+            <form action="#" th:action="@{'/delete/Event/{id}' (id=${evenement.getId()})}" method="POST">
+                <button> Supprimer </button>
+            </form>
+        </td>
+        <td>
+            <form action="#" th:action="@{'/modify/Event/{id}' (id=${evenement.getId()})}" method="GET">
+                <button> Modifier </button>
+            </form>
+        </td>
+
+        <td>
+            <form action="#" th:action="@{'/voir/Participant/{id}' (id=${evenement.getId()})}" method="GET">
+                <button> Participants  </button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
 </body>
 </html>

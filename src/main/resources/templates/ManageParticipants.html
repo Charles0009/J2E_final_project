@@ -4,24 +4,72 @@
     <title>Participant Management</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style/styles.css"></style>
-
+    <style>
+      table {
+        background-color: #d9d9d9;
+      }
+      th {
+        border: 2px solid #095484;
+      }
+      td {
+        border: 10px groove #1c87c9;
+      }
+      #add{
+        height:50px;
+        width:100px;
+      }
+    </style>
 </head>
 <body>
 <div class="login-box">
-    <h2>Gestion des participants</h2>
+    <h1>Gestion des participants</h1>
 
-    <div th:each="participant: ${participant}" class="ligne" th:id="${participant.id_parti}">
-        <div  class="container">
-            <div class="row-participant-text"><p th:text="${participant.num_pers}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.nom}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.prenom}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.email}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.date_naiss}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.organisation}"></p></div>
-            <div class="row-participant-text"><p th:text="${participant.observations}"></p></div>
-        </div>
-    </div>
+    <a href="/addParticipant">
+        <button class="button" id="add" type="submit" name="add" >Add participant</button>
+    </a>
 
-</div>
+    <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date_naissance</th>
+                <th>Email</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Numero</th>
+                <th>Observations</th>
+                <th>Organisation</th>
+
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="participant : ${participant}">
+                <td th:text="${participant.id_parti}" />
+                <td th:text="${participant.date_naiss}" />
+                <td th:text="${participant.email}" />
+                <td th:text="${participant.nom}" />
+                <td th:text="${participant.prenom}" />
+                <td th:text="${participant.num_pers}" />
+                <td th:text="${participant.observations}" />
+                <td th:text="${participant.organisation}" />
+                <td>
+                    <form action="#" th:action="@{'/delete/PArticipant/{id}' (id=${participant.getId()})}" method="POST">
+                        <button> Supprimer </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="#" th:action="@{'/modify/Participant/{id}' (id=${participant.getId()})}" method="GET">
+                        <button> Modifier </button>
+                    </form>
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+
 </body>
 </html>
+

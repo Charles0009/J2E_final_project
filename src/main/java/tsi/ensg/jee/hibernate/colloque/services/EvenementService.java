@@ -17,12 +17,7 @@ public class EvenementService {
     private final SessionFactory sessionFactory = HibernateUtils.createSessionFactory();
 
     public EvenementService(){
-
     }
-
-//    public EvenementService(SessionFactory sessionFactory) {
-//        this.sessionFactory = sessionFactory;
-//    }
 
     public void insertEvenement(Evenement evenement) {
         Session session = this.sessionFactory.openSession();
@@ -32,7 +27,7 @@ public class EvenementService {
         session.close();
     }
 
-    public boolean deleteEvenement(Long id) {
+    public boolean deleteEvenement(int id) {
         Evenement evenementToDelete = this.get(id);
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -42,7 +37,7 @@ public class EvenementService {
         return true;
     }
 
-    public Evenement get(long id) {
+    public Evenement get(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Evenement result = session.get(Evenement.class, id);
