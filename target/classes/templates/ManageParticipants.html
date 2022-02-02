@@ -19,19 +19,22 @@
         width:100px;
       }
     </style>
+
 </head>
 <body>
 <div >
     <h1>Gestion des participants</h1>
 
-    <a href="/addParticipant">
+    <a id="add_parti" href="/addParticipant">
         <button class="button" id="add" type="submit" name="add" >Add participant</button>
     </a>
+    <br />
+
 
     <table>
             <thead>
             <tr>
-                <th>ID</th>
+
                 <th>Date_naissance</th>
                 <th>Email</th>
                 <th>Nom</th>
@@ -44,7 +47,7 @@
             </thead>
             <tbody>
             <tr th:each="participant : ${participant}">
-                <td th:text="${participant.id_parti}" />
+
                 <td th:text="${participant.date_naiss}" />
                 <td th:text="${participant.email}" />
                 <td th:text="${participant.nom}" />
@@ -66,7 +69,17 @@
             </tr>
             </tbody>
         </table>
+    <br />
+    <br />
+    <a href="/ManageEvenements">Retourner vers les évènements</a>
+</div>
+<script>
+        var boutton=document.getElementById('add_parti');
+        var url = String(document.location.href);
+        var event_id = url[url.length-1];
 
+        boutton.href = "/addParticipant/"+event_id;
+    </script>
 </body>
 </html>
 

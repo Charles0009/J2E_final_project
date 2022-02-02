@@ -42,7 +42,8 @@ public class GreetingController {
     public String addEvenement(@Validated Evenement evenement, BindingResult result, Model model) {
         EvenementService service = new EvenementService();
         service.insertEvenement(evenement);
-        return"redirect:/eventAdded";
+        return"redirect:/ManageEvenements" +
+                "";
     }
 
     @GetMapping("/eventAdded")
@@ -51,33 +52,54 @@ public class GreetingController {
         return "eventAdded";
     }
 
-    @GetMapping("/addParticipant")
-    public String addParticipant() {
+    @GetMapping("/addParticipant/{id}")
+    public String addParticipant(@PathVariable int id) {
+        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(id);
         return "addParticipant";
     }
 
-    @PostMapping("/ParticipantAdding")
-    public String ParticipantAdding(@Validated Participant participant, BindingResult result, Model model) {
-          String list_of_inputs = participant.toString();
-        System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
-        System.out.println(list_of_inputs);
+//    @GetMapping("/Participant/Add/{id}")
+//    public String ParticipantAdding(@PathVariable int id){
+//        System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////////");
+//        System.out.println(id);
+//        return "redirect:/addParticipant.html";
+//    }
 
-        ParticipantService service_parti = new ParticipantService();
-        service_parti.insertParticipant(participant);
-        return"redirect:/eventAdded";
+    @PostMapping("/Participant/Add/{id}")
+    public String ParticipantAdding(@Validated Participant p,@PathVariable int id, BindingResult result, Model model) {
+        System.out.println("----------------------------------------------------------------------");
+        System.out.println(id);
+
+        ParticipantService service = new ParticipantService();
+
+
+        //String list_of_inputs = participant.toString();
+        //int num_pers,String nom,String prenom,String email, String date_naiss, String organisation, String observations
+        Participant new_part = new Participant(p.getNum_pers(),p.getNom(),p.getPrenom(),p.getEmail(),p.getDate_naiss(),p.getOrganisation(),p.getObservations());
+        //System.out.println("///////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+        //System.out.println(list_of_inputs);
+
+       //ParticipantService service_parti = new ParticipantService();
+        //service.insertParticipant(new_part);
+
+        EvenementService service_ev = new EvenementService();
+        Evenement eve1 = service_ev.get(id);
+        eve1.addParticipant(new_part);
+
+        service_ev.insertEvenement(eve1);
+
+
+        String ids=String.valueOf(id);
+        return"redirect:/ManageParticipants/"+ids;
     }
 
     @GetMapping("/ManageParticipants/{id}")
     public String getParticipant(@PathVariable int id,Model model) {
-
         ParticipantService service = new ParticipantService();
-//        List<Participant> liste_participants = service.getAll();
         EvenementService service_ev = new EvenementService();
         Evenement eve1 = service_ev.get(id);
         List<Participant> liste_participants =  eve1.getParticipants();
-        System.out.println("size : ");
-        System.out.println(liste_participants.size());
-
         model.addAttribute("participant", liste_participants);
         return "ManageParticipants";
     }
@@ -86,8 +108,8 @@ public class GreetingController {
     public String getEvenement(Model model) {
         EvenementService service_env = new EvenementService();
         List<Evenement> liste_evenements = service_env.getAll();
-        System.out.println("/////////////////////////////////////////////////////////");
-        System.out.println(liste_evenements);
+       // System.out.println("/////////////////////////////////////////////////////////");
+        //System.out.println(liste_evenements);
         model.addAttribute("evenement", liste_evenements);
         return "ManageEvenements";
     }
@@ -184,5 +206,3 @@ public class GreetingController {
 
 
 }
-
-

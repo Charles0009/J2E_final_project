@@ -20,7 +20,7 @@ public class EvenementService {
     }
 
     public void insertEvenement(Evenement evenement) {
-        Session session = this.sessionFactory.openSession();
+        Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.saveOrUpdate(evenement);
         session.getTransaction().commit();

@@ -8,7 +8,7 @@
 <body>
 <div class="login-box">
     <h2>Créer un participant</h2>
-    <form action="/ParticipantAdding"  method="post">
+    <form id="form_parti" action="/Participant/Add/{id}"  method="post">
         <div class="user-box">
             <input type="integer" name="num_pers" required="True">
             <label>Numero de la personne</label>
@@ -48,5 +48,11 @@
         </a>
     </form>
 </div>
+<script>
+        var boutton=document.getElementById('form_parti');
+        var url = String(document.location.href);
+        var event_id = url[url.length-1];
+        boutton.action = "/Participant/Add/"+event_id;
+    </script>
 </body>
 </html>
