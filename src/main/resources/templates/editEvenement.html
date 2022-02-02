@@ -8,11 +8,11 @@
 <body>
 <div class="login-box">
             <h2>Modifier l'evenement</h2>
-<!--            <form action="/evenementEdit" method="post">-->
-                <form method="post">
-                <input type="number" name="id_ev" th:value="${evenement.id_ev}" style="visibility:hidden;">
-                <div class="user-box">
-                    <input type="number" name='num_even' required="True" th:value="${evenement.num_even}">
+          <form id = "editevt" action="/evenementEdit" method="post">
+
+                     <input type="number" name="id_ev" th:value="${evenement.id_ev}" style="visibility:hidden;">
+                     <div class="user-box">
+                         <input type="number" name='num_even' required="True" th:value="${evenement.num_even}">
                     <label>Numero de l'évenement</label>
                 </div>
                 <div class="user-box">
@@ -59,10 +59,16 @@
                              <span></span>
                              <span></span>
                              <span></span>
-                             <button formaction="/evenementEdit">Change the event</button>
+                             <button type='submit'>Change the event</button>
                          </a>
                      </form>
                  </div>
+                <script>
+                    var button = document.getElementById("editevt");
+                    var url = String(document.location.href);
+                    var event_id = url[url.length-1];
+                    button.action ="/evenementEdit/" + event_id;
+                </script>
                  </body>
                  </html>
 
