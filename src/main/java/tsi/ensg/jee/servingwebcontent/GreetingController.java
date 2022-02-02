@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,6 +25,13 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "greeting";
     }
+
+    // @GetMapping("/addEvent")
+    //  public String greeting2(@RequestParam(name="name", required=false, defaultValue="Charles") String name, Model model) {
+    //    model.addAttribute("name", name);
+    //     return "addEvent";
+    //}
+
 
     @GetMapping("/addEvent")
     public String addEvent() {
@@ -59,10 +67,24 @@ public class GreetingController {
         return"redirect:/eventAdded";
     }
 
-    @GetMapping("/ManageParticipants")
-    public String getParticipant(Model model) {
+    @GetMapping("/ManageParticipants/{id}")
+    public String getParticipant(@PathVariable int id,Model model) {
+
         ParticipantService service = new ParticipantService();
-        List<Participant> liste_participants = service.getAll();
+//        List<Participant> liste_participants = service.getAll();
+        EvenementService service_ev = new EvenementService();
+        Evenement eve1 = service_ev.get(id);
+        List<Participant> liste_participants =  eve1.getParticipants();
+        System.out.println("size : ");
+        System.out.println(liste_participants.size());
+
+//        for (int i = 0; i < liste_participants.size(); i++)
+//        {
+//            System.out.println(i);
+//            Participant participant = participants.get(i);
+//            liste_participants.add(participant);
+//
+//        }
         model.addAttribute("participant", liste_participants);
         return "ManageParticipants";
     }
@@ -71,55 +93,28 @@ public class GreetingController {
     public String getEvenement(Model model) {
         EvenementService service_env = new EvenementService();
         List<Evenement> liste_evenements = service_env.getAll();
-//        System.out.println("/////////////////////////////////////////////////////////");
-//        System.out.println(liste_evenements);
+        System.out.println("/////////////////////////////////////////////////////////");
+        System.out.println(liste_evenements);
         model.addAttribute("evenement", liste_evenements);
         return "ManageEvenements";
     }
 
-    @GetMapping("/editParticipant")
-    public String editParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "0") int id, Model model) {
-        ParticipantService service_edit = new ParticipantService();
-        Participant participant = service_edit.get(id);
-        model.addAttribute("participant", participant);
-        service_edit.deleteParticipant(id);
-        return "editParticipant";
-    }
-
-    @PostMapping("/participantEdit")
-    public String participantEdit(@Validated Participant participant, BindingResult result, Model model) {
-        ParticipantService service_parti = new ParticipantService();
-        service_parti.insertParticipant(participant);
-        return"redirect:/ManageParticipants";
-    }
-
-    @GetMapping("/editEvenement")
-    public String editEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "0") int id, Model model) {
-        EvenementService service_ev_edit = new EvenementService();
-        Evenement evenement = service_ev_edit.get(id);
-        model.addAttribute("evenement", evenement);
-        service_ev_edit.deleteEvenement(id);
-        return "editEvenement";
-    }
-
-    @PostMapping("/evenementEdit")
-    public String participantEdit(@Validated Evenement evenement, BindingResult result, Model model) {
-        EvenementService service_ev = new EvenementService();
-        service_ev.insertEvenement(evenement);
-        return"redirect:/ManageEvenements";
-    }
-
-    @GetMapping("/deleteParticipant")
-    public String deleteParticipant(@RequestParam(name="id_parti", required = true, defaultValue = "0") int id, Model model) {
-        ParticipantService service_delete_parti = new ParticipantService();
-        service_delete_parti.deleteParticipant(id);
-        return "redirect:/ManageParticipants";
-    }
-
-    @GetMapping("/deleteEvenement")
-    public String deleteEvenement(@RequestParam(name="id_ev", required = true, defaultValue = "0") int id, Model model) {
-        EvenementService service_ev_delete = new EvenementService();
-        service_ev_delete.deleteEvenement(id);
+    @PostMapping("delete/Event/{id}")
+    public String deleteEvent(@PathVariable int id){
+        System.out.println(id);
+        //evenementService.delete(id);
         return "redirect:/ManageEvenements";
     }
+
+    @GetMapping("voir/Participant/{id}")
+    public String participant(@PathVariable int id) {
+        System.out.println(id);
+        EvenementService service = new EvenementService();
+        Evenement evenement = service.get(id);
+        System.out.println(evenement);
+        return "redirect:/ManageParticipants/{id}";
+    }
+
+
+
 }

@@ -17,12 +17,7 @@ public class EvenementService {
     private final SessionFactory sessionFactory = HibernateUtils.createSessionFactory();
 
     public EvenementService(){
-
     }
-
-//    public EvenementService(SessionFactory sessionFactory) {
-//        this.sessionFactory = sessionFactory;
-//    }
 
     public void insertEvenement(Evenement evenement) {
         Session session = this.sessionFactory.openSession();

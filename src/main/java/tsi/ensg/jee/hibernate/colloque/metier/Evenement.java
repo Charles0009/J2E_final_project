@@ -162,6 +162,7 @@ public class Evenement {
     public void setType(String type){this.type = type;}
 
     public List<Participant> getParticipants(){return participants;}
+
     public void setParticipants(ArrayList<Participant> participants){this.participants = participants;}
 
 }
